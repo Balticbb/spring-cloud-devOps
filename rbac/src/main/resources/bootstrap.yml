@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    consul:
+      host: 192.168.0.204
+      port: 8500
+      config:
+        enabled: true
+        prefix: configuration
+        defaultContext: application
+        profileSeparator: ','
+        format: YAML
+
+

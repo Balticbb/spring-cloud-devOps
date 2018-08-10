@@ -1,0 +1,30 @@
+server:
+  port: 9990
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    consul:
+      discovery:
+        prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+logging:
+  level:
+    com:
+      ms:
+        apigateway:
+          feignclient:
+            UserClient: debug
+  file: api-gateway.log
+#logging:
+#  level:
+#    root: debug
+#  -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:46471,suspend=y,server=n -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=36265 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -javaagent:/snap/intellij-idea-ultimate/64/lib/rt/debugger-agent.jar=file:/tmp/capture.props -Dfile.encoding=UTF-8-agentlib:jdwp=transport=dt_socket,address=127.0.0.1:46471,suspend=y,server=n -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=36265 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -javaagent:/snap/intellij-idea-ultimate/64/lib/rt/debugger-agent.jar=file:/tmp/capture.props -Dfile.encoding=UTF-8

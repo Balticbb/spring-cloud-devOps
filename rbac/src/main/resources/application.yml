@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: rbac
+  cloud:
+    consul:
+      discovery:
+        prefer-ip-address: true
+server:
+  port: 11231
+#  port: ${random.int[10000,20000]}
+logging:
+  file: rbac.log
