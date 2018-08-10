@@ -101,7 +101,7 @@
                         <credHelper>pass</credHelper>
                         <auth>
                             <username>baltic</username>
-                            <password>abc123456</password>
+                            <password>***</password>
                         </auth>
                     </from>
                     <to>
